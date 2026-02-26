@@ -8,25 +8,30 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      fontSize: {
-        clamp: "clamp(17px, 2vw, 20px)",
-        midClamp: "clamp(13px, 2vw, 16px)",
-        smClamp: "clamp(10px, 2vw, 13px)",
+      fontFamily: {
+        display: ["var(--font-display)", "serif"],
+        body: ["var(--font-body)", "sans-serif"],
       },
       colors: {
-        primary_color: "#3FB1FA",
-        secondry_color: "#3fb2fa7a",
-        secondry_lite_color: "#3fb2fa27",
-        primary_text_color: "#6B7A99",
-      },
-      screens: {
-        smMobile: { max: "400px" },
-        mobile: { max: "575px" },
-        tablet: { max: "768px" },
-        tabletlg: { max: "992px" },
+        green: {
+          primary: "#1a7a35",
+          dark: "#0d4f1e",
+          light: "#2d9e50",
+          50: "#f0faf3",
+          100: "#d9f5e1",
+          200: "#b3ebca",
+          300: "#7dd8a4",
+          400: "#45c07d",
+          500: "#28a745",
+          600: "#1a7a35",
+          700: "#155e28",
+          800: "#0d4f1e",
+          900: "#073d16",
+        },
       },
     },
   },
   plugins: [],
 };
+
 export default config;

@@ -3,67 +3,49 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 248, 250, 252;
-  --background-start-rgb: 2, 6, 23;
-  --background-end-rgb: 2, 6, 23;
+  --font-display: "Merriweather", serif;
+  --font-body: "Nunito", sans-serif;
+  --green-primary: #1a7a35;
+  --green-dark: #0d4f1e;
+  --green-light: #2d9e50;
 }
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 html {
-  overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: rgb(var(--background-start-rgb));
-  overflow-x: hidden;
+  font-family: var(--font-body);
+  background-color: #ffffff;
+  color: #1a202c;
+  -webkit-font-smoothing: antialiased;
 }
 
-.scrollbar-hide::-webkit-scrollbar {
-    display: none;
-}
-.scrollbar-hide {
-    -ms-overflow-style: none;
-    scrollbar-width: none;
+.font-display {
+  font-family: var(--font-display);
 }
 
-/* Custom Gold Gradient Text */
-.text-gold-gradient {
-  background: linear-gradient(to right, #bf953f, #fcf6ba, #b38728, #fbf5b7, #aa771c);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-}
-.border-gold {
-  border-image: linear-gradient(to right, #bf953f, #fcf6ba, #b38728) 1;
+.font-body {
+  font-family: var(--font-body);
 }
 
-.mask-gradient {
-  mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
-  -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
 }
-/* Desktop/tablet */
-.portfolioSection {
-  min-height: 100svh;
+::-webkit-scrollbar-track {
+  background: #f0f4f0;
 }
-
-/* MOBILE TUNING */
-@media (max-width: 640px) {
-  .portfolioSection {
-    min-height: auto;
-    padding-top: 0.75rem;   /* ADD */
-    padding-bottom: 2rem;/* ADD */
-  }
-
-  .innerWrap {
-    padding-bottom: 0; /* keep tight */
-  }
+::-webkit-scrollbar-thumb {
+  background: #1a7a3560;
+  border-radius: 10px;
 }
- @media (max-width: 412px) {
-        .mobile-button {
-            padding-top: 0.525rem !important;
-            padding-bottom: 0.525rem !important;
-            font-size: 12px !important;
-            width: 70%;
-        }
-    }
-
-    
+::-webkit-scrollbar-thumb:hover {
+  background: #1a7a35;
+}
