@@ -2,6 +2,214 @@
 
 import { useState, useRef, useEffect } from "react";
 
+// ── Professional SVG Icons ─────────────────────────────────────────────────────
+
+function IcGlobe({ className = "w-4 h-4" }: { className?: string }) {
+    return (
+        <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 004 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+    );
+}
+function IcLogin({ className = "w-4 h-4" }: { className?: string }) {
+    return (
+        <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1" />
+        </svg>
+    );
+}
+function IcCheck({ className = "w-4 h-4" }: { className?: string }) {
+    return (
+        <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
+        </svg>
+    );
+}
+function IcCheckSm({ className = "w-3 h-3" }: { className?: string }) {
+    return (
+        <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
+        </svg>
+    );
+}
+function IcChevronDown({ className = "w-4 h-4" }: { className?: string }) {
+    return (
+        <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+        </svg>
+    );
+}
+function IcSearch({ className = "w-4 h-4" }: { className?: string }) {
+    return (
+        <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+        </svg>
+    );
+}
+function IcUser({ className = "w-5 h-5" }: { className?: string }) {
+    return (
+        <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+        </svg>
+    );
+}
+function IcPhone({ className = "w-4 h-4" }: { className?: string }) {
+    return (
+        <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+        </svg>
+    );
+}
+function IcMail({ className = "w-4 h-4" }: { className?: string }) {
+    return (
+        <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+        </svg>
+    );
+}
+function IcLock({ className = "w-5 h-5" }: { className?: string }) {
+    return (
+        <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+        </svg>
+    );
+}
+function IcShield({ className = "w-4 h-4" }: { className?: string }) {
+    return (
+        <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+        </svg>
+    );
+}
+function IcPhoto({ className = "w-8 h-8" }: { className?: string }) {
+    return (
+        <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+        </svg>
+    );
+}
+function IcUserPlaceholder({ className = "w-8 h-8" }: { className?: string }) {
+    return (
+        <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+        </svg>
+    );
+}
+function IcEye({ className = "w-5 h-5" }: { className?: string }) {
+    return (
+        <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0zM2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+        </svg>
+    );
+}
+function IcEyeOff({ className = "w-5 h-5" }: { className?: string }) {
+    return (
+        <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13.875 18.825A10.05 10.05 0 0112 19c-4.478 0-8.268-2.943-9.543-7a9.97 9.97 0 011.563-3.029m5.858.908a3 3 0 114.243 4.243M9.878 9.878l4.242 4.242M9.88 9.88l-3.29-3.29m7.532 7.532l3.29 3.29M3 3l3.59 3.59m0 0A9.953 9.953 0 0112 5c4.478 0 8.268 2.943 9.543 7a10.025 10.025 0 01-4.132 5.411m0 0L21 21" />
+        </svg>
+    );
+}
+function IcBolt({ className = "w-4 h-4" }: { className?: string }) {
+    return (
+        <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+        </svg>
+    );
+}
+function IcDocument({ className = "w-4 h-4" }: { className?: string }) {
+    return (
+        <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+        </svg>
+    );
+}
+function IcHandshake({ className = "w-4 h-4" }: { className?: string }) {
+    return (
+        <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" />
+        </svg>
+    );
+}
+function IcDeviceMobile({ className = "w-4 h-4" }: { className?: string }) {
+    return (
+        <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
+        </svg>
+    );
+}
+function IcUserAdd({ className = "w-5 h-5" }: { className?: string }) {
+    return (
+        <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z" />
+        </svg>
+    );
+}
+function IcArrowLeft({ className = "w-4 h-4" }: { className?: string }) {
+    return (
+        <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 16l-4-4m0 0l4-4m-4 4h14" />
+        </svg>
+    );
+}
+function IcBriefcase({ className = "w-4 h-4" }: { className?: string }) {
+    return (
+        <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+        </svg>
+    );
+}
+function IcAcademic({ className = "w-4 h-4" }: { className?: string }) {
+    return (
+        <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
+        </svg>
+    );
+}
+function IcOfficeBuilding({ className = "w-4 h-4" }: { className?: string }) {
+    return (
+        <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+        </svg>
+    );
+}
+function IcSun({ className = "w-4 h-4" }: { className?: string }) {
+    return (
+        <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+        </svg>
+    );
+}
+function IcUsers({ className = "w-4 h-4" }: { className?: string }) {
+    return (
+        <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+        </svg>
+    );
+}
+function IcHospital({ className = "w-4 h-4" }: { className?: string }) {
+    return (
+        <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+        </svg>
+    );
+}
+function IcPlane({ className = "w-4 h-4" }: { className?: string }) {
+    return (
+        <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
+        </svg>
+    );
+}
+function IcIdentification({ className = "w-4 h-4" }: { className?: string }) {
+    return (
+        <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V8a2 2 0 00-2-2h-5m-4 0V5a2 2 0 114 0v1m-4 0a2 2 0 104 0m-5 8a2 2 0 100-4 2 2 0 000 4zm0 0c1.306 0 2.417.835 2.83 2M9 14a3.001 3.001 0 00-2.83 2M15 11h3m-3 4h2" />
+        </svg>
+    );
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+
 const COUNTRIES = [
     "United Kingdom", "United States", "Canada", "Australia", "Germany", "France",
     "Netherlands", "Sweden", "Norway", "Denmark", "Switzerland", "Belgium", "Ireland",
@@ -14,14 +222,14 @@ const COUNTRIES = [
 ];
 
 const PURPOSES = [
-    { value: "study", label: " Study / Education", desc: "University, college, language school" },
-    { value: "work", label: " Work / Employment", desc: "Skilled worker, intra-company transfer" },
-    { value: "business", label: " Business Visit", desc: "Meetings, conferences, trade" },
-    { value: "tourist", label: " Tourism / Holiday", desc: "Leisure, sightseeing, recreation" },
-    { value: "family", label: " Family Visit", desc: "Visiting spouse, parents, relatives" },
-    { value: "medical", label: " Medical Treatment", desc: "Healthcare, surgery, therapy" },
-    { value: "transit", label: " Transit", desc: "Passing through to another country" },
-    { value: "settlement", label: " Settlement / PR", desc: "Permanent residency, spouse visa" },
+    { value: "study", label: "Study / Education", desc: "University, college, language school", Icon: IcAcademic },
+    { value: "work", label: "Work / Employment", desc: "Skilled worker, intra-company transfer", Icon: IcBriefcase },
+    { value: "business", label: "Business Visit", desc: "Meetings, conferences, trade", Icon: IcOfficeBuilding },
+    { value: "tourist", label: "Tourism / Holiday", desc: "Leisure, sightseeing, recreation", Icon: IcSun },
+    { value: "family", label: "Family Visit", desc: "Visiting spouse, parents, relatives", Icon: IcUsers },
+    { value: "medical", label: "Medical Treatment", desc: "Healthcare, surgery, therapy", Icon: IcHospital },
+    { value: "transit", label: "Transit", desc: "Passing through to another country", Icon: IcPlane },
+    { value: "settlement", label: "Settlement / PR", desc: "Permanent residency, spouse visa", Icon: IcIdentification },
 ];
 
 export default function RegisterPage() {
@@ -38,12 +246,10 @@ export default function RegisterPage() {
     const [submitted, setSubmitted] = useState(false);
     const [errors, setErrors] = useState<Record<string, string>>({});
 
-    // Country search state
     const [countrySearch, setCountrySearch] = useState("");
     const [countryOpen, setCountryOpen] = useState(false);
     const countryRef = useRef<HTMLDivElement>(null);
 
-    // Purpose dropdown state
     const [purposeOpen, setPurposeOpen] = useState(false);
     const purposeRef = useRef<HTMLDivElement>(null);
 
@@ -51,7 +257,6 @@ export default function RegisterPage() {
         c.toLowerCase().includes(countrySearch.toLowerCase())
     );
 
-    // Close dropdowns on outside click
     useEffect(() => {
         const handler = (e: MouseEvent) => {
             if (countryRef.current && !countryRef.current.contains(e.target as Node)) setCountryOpen(false);
@@ -140,9 +345,7 @@ export default function RegisterPage() {
             <div className="min-h-screen bg-gray-50 flex items-center justify-center px-4" style={{ fontFamily: "Nunito,sans-serif" }}>
                 <div className="bg-white rounded-2xl shadow-xl border border-gray-100 p-10 max-w-md w-full text-center">
                     <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                        <svg className="w-10 h-10 text-green-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
-                        </svg>
+                        <IcCheck className="w-10 h-10 text-green-700" />
                     </div>
                     <h2 className="text-2xl font-black text-gray-900 mb-2" style={{ fontFamily: "Merriweather,serif" }}>Account Created!</h2>
                     <div className="flex items-center justify-center gap-2 mb-4">
@@ -202,12 +405,13 @@ export default function RegisterPage() {
                     </a>
                     <div className="flex items-center gap-3">
                         <a href="/login" className="border border-green-700 text-green-700 hover:bg-green-50 font-semibold text-sm px-4 py-2 rounded-md transition-all hidden sm:flex items-center gap-2">
-                            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1" />
-                            </svg>
+                            <IcLogin />
                             Login
                         </a>
-                        <a href="/" className="text-gray-500 hover:text-green-700 text-sm font-medium transition-colors">← Home</a>
+                        <a href="/" className="text-gray-500 hover:text-green-700 text-sm font-medium transition-colors flex items-center gap-1.5">
+                            <IcArrowLeft />
+                            Home
+                        </a>
                     </div>
                 </div>
             </nav>
@@ -225,9 +429,14 @@ export default function RegisterPage() {
                         Register for the <span className="text-green-300 font-semibold">UK Competency Certificate</span> — your gateway to a successful UK visa application.
                     </p>
                     <div className="flex flex-wrap items-center justify-center gap-4 mt-6">
-                        {[{ icon: "⚡", text: "Quick Registration" }, { icon: "🔒", text: "Secure Data Protection" }, { icon: "✅", text: "Simple Verification" }].map(b => (
+                        {[
+                            { Icon: IcBolt, text: "Quick Registration" },
+                            { Icon: IcLock, text: "Secure Data Protection" },
+                            { Icon: IcCheck, text: "Simple Verification" },
+                        ].map(b => (
                             <div key={b.text} className="flex items-center gap-2 bg-white/10 border border-white/20 rounded-full px-4 py-1.5 text-sm text-white/90">
-                                <span>{b.icon}</span><span>{b.text}</span>
+                                <b.Icon className="w-3.5 h-3.5" />
+                                <span>{b.text}</span>
                             </div>
                         ))}
                     </div>
@@ -254,9 +463,7 @@ export default function RegisterPage() {
                                 <div className="h-px bg-gray-100" />
                                 {["All UK visa categories", "Business, Education, Labour, Tourist", "75% passing score required", "Digitally verified certificate"].map(item => (
                                     <div key={item} className="flex items-start gap-2">
-                                        <svg className="w-4 h-4 text-green-700 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
-                                        </svg>
+                                        <IcCheck className="w-4 h-4 text-green-700 mt-0.5 flex-shrink-0" />
                                         <span className="text-gray-600 text-xs">{item}</span>
                                     </div>
                                 ))}
@@ -264,9 +471,16 @@ export default function RegisterPage() {
                         </div>
 
                         <div className="bg-green-50 border border-green-200 rounded-2xl p-5">
-                            <p className="font-bold text-gray-900 text-sm mb-4 flex items-center gap-2"><span>📱</span> After Registration</p>
+                            <p className="font-bold text-gray-900 text-sm mb-4 flex items-center gap-2">
+                                <IcDeviceMobile className="w-4 h-4 text-green-700" />
+                                After Registration
+                            </p>
                             <div className="space-y-3">
-                                {[{ n: "1", t: "Receive OTP on mobile" }, { n: "2", t: "Verify & activate account" }, { n: "3", t: "Log in to begin assessment" }].map(s => (
+                                {[
+                                    { n: "1", t: "Receive OTP on mobile" },
+                                    { n: "2", t: "Verify & activate account" },
+                                    { n: "3", t: "Log in to begin assessment" },
+                                ].map(s => (
                                     <div key={s.n} className="flex items-center gap-3">
                                         <div className="w-6 h-6 bg-green-700 text-white text-xs font-bold rounded-full flex items-center justify-center flex-shrink-0">{s.n}</div>
                                         <span className="text-gray-700 text-xs">{s.t}</span>
@@ -276,13 +490,14 @@ export default function RegisterPage() {
                         </div>
 
                         <div className="bg-white border border-gray-200 rounded-2xl p-5">
-                            <p className="font-bold text-gray-900 text-sm mb-3 flex items-center gap-2"><span>🔐</span> Data Protection</p>
+                            <p className="font-bold text-gray-900 text-sm mb-3 flex items-center gap-2">
+                                <IcShield className="w-4 h-4 text-blue-600" />
+                                Data Protection
+                            </p>
                             {["Protected and encrypted", "Used only for certification", "UK visa verification purposes"].map(item => (
                                 <div key={item} className="flex items-center gap-2 mb-2">
                                     <div className="w-4 h-4 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0">
-                                        <svg className="w-2.5 h-2.5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
-                                        </svg>
+                                        <IcCheckSm className="w-2.5 h-2.5 text-blue-600" />
                                     </div>
                                     <span className="text-gray-600 text-xs">{item}</span>
                                 </div>
@@ -292,9 +507,7 @@ export default function RegisterPage() {
                         <div className="bg-white border border-gray-200 rounded-2xl p-5 text-center">
                             <p className="text-gray-500 text-sm mb-3">Already have an account?</p>
                             <a href="/login" className="flex items-center justify-center gap-2 border border-green-700 text-green-700 hover:bg-green-50 font-bold text-sm px-5 py-2.5 rounded-lg transition-all">
-                                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 16l-4-4m0 0l4-4m-4 4h14" />
-                                </svg>
+                                <IcArrowLeft />
                                 Log in Here
                             </a>
                         </div>
@@ -306,9 +519,7 @@ export default function RegisterPage() {
 
                             <div className="px-6 py-5 border-b border-gray-100 flex items-center gap-3">
                                 <div className="w-9 h-9 bg-green-100 rounded-xl flex items-center justify-center">
-                                    <svg className="w-5 h-5 text-green-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-                                    </svg>
+                                    <IcUser className="w-5 h-5 text-green-700" />
                                 </div>
                                 <div>
                                     <h2 className="font-black text-gray-900 text-lg" style={{ fontFamily: "Merriweather,serif" }}>Registration Form</h2>
@@ -320,7 +531,7 @@ export default function RegisterPage() {
 
                                 {/* PERSONAL INFO */}
                                 <section>
-                                    <SectionHeading icon="👤" title="Personal Information" />
+                                    <SectionHeading Icon={IcUser} title="Personal Information" />
                                     <div className="grid sm:grid-cols-2 gap-4">
                                         <InputField label="First Name" name="firstName" required placeholder="e.g. Muhammad" value={formData.firstName} onChange={handleChange} error={errors.firstName} />
                                         <InputField label="Middle Name" name="middleName" placeholder="Optional" value={formData.middleName} onChange={handleChange} />
@@ -345,19 +556,17 @@ export default function RegisterPage() {
                                         <p className="text-gray-400 text-xs mt-1">Format: 12345-1234567-1</p>
                                     </div>
 
-                                    {/* ── NEW: DESTINATION + PURPOSE ── */}
+                                    {/* DESTINATION + PURPOSE */}
                                     <div className="grid sm:grid-cols-2 gap-4 mt-4">
 
-                                        {/* DESTINATION COUNTRY (searchable dropdown) */}
+                                        {/* DESTINATION COUNTRY */}
                                         <div ref={countryRef}>
                                             <label className="block text-sm font-semibold text-gray-700 mb-1.5">
                                                 Destination Country <span className="text-red-500">*</span>
                                             </label>
                                             <div className="relative">
                                                 <div className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none">
-                                                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 004 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                                    </svg>
+                                                    <IcGlobe className="w-4 h-4" />
                                                 </div>
                                                 <input
                                                     type="text"
@@ -371,14 +580,10 @@ export default function RegisterPage() {
                                                     }}
                                                     className={`w-full border ${errors.destination ? "border-red-400 bg-red-50" : formData.destination ? "border-green-400 bg-green-50" : "border-gray-200"} rounded-lg pl-9 pr-9 py-3 text-gray-800 text-sm placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-green-700/30 focus:border-green-700 transition-all`}
                                                 />
-                                                {/* Chevron */}
                                                 <div className="absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none text-gray-400">
-                                                    <svg className={`w-4 h-4 transition-transform ${countryOpen ? "rotate-180" : ""}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                                                    </svg>
+                                                    <IcChevronDown className={`w-4 h-4 transition-transform ${countryOpen ? "rotate-180" : ""}`} />
                                                 </div>
 
-                                                {/* Dropdown list */}
                                                 {countryOpen && (
                                                     <div className="absolute z-50 top-full left-0 right-0 mt-1 bg-white border border-gray-200 rounded-xl shadow-xl overflow-hidden">
                                                         <div className="max-h-48 overflow-y-auto">
@@ -389,23 +594,15 @@ export default function RegisterPage() {
                                                                     onClick={() => selectCountry(country)}
                                                                     className={`w-full text-left px-4 py-2.5 text-sm hover:bg-green-50 hover:text-green-700 transition-colors flex items-center gap-2 ${formData.destination === country ? "bg-green-50 text-green-700 font-semibold" : "text-gray-700"}`}
                                                                 >
-                                                                    {country === "United Kingdom" && <span>🇬🇧</span>}
-                                                                    {country === "United States" && <span>🇺🇸</span>}
-                                                                    {country === "Canada" && <span>🇨🇦</span>}
-                                                                    {country === "Australia" && <span>🇦🇺</span>}
-                                                                    {country === "Germany" && <span>🇩🇪</span>}
-                                                                    {country === "France" && <span>🇫🇷</span>}
-                                                                    {!["United Kingdom", "United States", "Canada", "Australia", "Germany", "France"].includes(country) && <span>🌍</span>}
+                                                                    <IcGlobe className="w-3.5 h-3.5 text-gray-400 flex-shrink-0" />
                                                                     {country}
                                                                     {formData.destination === country && (
-                                                                        <svg className="w-4 h-4 ml-auto text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
-                                                                        </svg>
+                                                                        <IcCheck className="w-4 h-4 ml-auto text-green-600" />
                                                                     )}
                                                                 </button>
                                                             )) : (
                                                                 <div className="px-4 py-6 text-center text-gray-400 text-sm">
-                                                                    <span className="text-2xl block mb-1">🔍</span>
+                                                                    <IcSearch className="w-6 h-6 mx-auto mb-2 text-gray-300" />
                                                                     No countries found
                                                                 </div>
                                                             )}
@@ -416,7 +613,7 @@ export default function RegisterPage() {
                                             {errors.destination && <p className="text-red-500 text-xs mt-1">{errors.destination}</p>}
                                             {formData.destination && (
                                                 <p className="text-green-700 text-xs mt-1 flex items-center gap-1 font-semibold">
-                                                    <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" /></svg>
+                                                    <IcCheckSm className="w-3 h-3" />
                                                     {formData.destination} selected
                                                 </p>
                                             )}
@@ -433,15 +630,17 @@ export default function RegisterPage() {
                                                     onClick={() => setPurposeOpen(!purposeOpen)}
                                                     className={`w-full border ${errors.purpose ? "border-red-400 bg-red-50" : formData.purpose ? "border-green-400 bg-green-50" : "border-gray-200 bg-white"} rounded-lg px-4 py-3 text-sm text-left flex items-center justify-between focus:outline-none focus:ring-2 focus:ring-green-700/30 focus:border-green-700 transition-all`}
                                                 >
-                                                    <span className={selectedPurpose ? "text-gray-800 font-medium" : "text-gray-400"}>
-                                                        {selectedPurpose ? selectedPurpose.label : "Select purpose..."}
+                                                    <span className={selectedPurpose ? "text-gray-800 font-medium flex items-center gap-2" : "text-gray-400"}>
+                                                        {selectedPurpose ? (
+                                                            <>
+                                                                <selectedPurpose.Icon className="w-4 h-4 text-green-700 flex-shrink-0" />
+                                                                {selectedPurpose.label}
+                                                            </>
+                                                        ) : "Select purpose..."}
                                                     </span>
-                                                    <svg className={`w-4 h-4 text-gray-400 transition-transform flex-shrink-0 ml-2 ${purposeOpen ? "rotate-180" : ""}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                                                    </svg>
+                                                    <IcChevronDown className={`w-4 h-4 text-gray-400 transition-transform flex-shrink-0 ml-2 ${purposeOpen ? "rotate-180" : ""}`} />
                                                 </button>
 
-                                                {/* Purpose dropdown */}
                                                 {purposeOpen && (
                                                     <div className="absolute z-50 top-full left-0 right-0 mt-1 bg-white border border-gray-200 rounded-xl shadow-xl overflow-hidden">
                                                         <div className="max-h-64 overflow-y-auto py-1">
@@ -450,10 +649,15 @@ export default function RegisterPage() {
                                                                     key={p.value}
                                                                     type="button"
                                                                     onClick={() => selectPurpose(p.value)}
-                                                                    className={`w-full text-left px-4 py-3 hover:bg-green-50 transition-colors ${formData.purpose === p.value ? "bg-green-50 border-l-2 border-green-600" : ""}`}
+                                                                    className={`w-full text-left px-4 py-3 hover:bg-green-50 transition-colors flex items-start gap-3 ${formData.purpose === p.value ? "bg-green-50 border-l-2 border-green-600" : ""}`}
                                                                 >
-                                                                    <p className={`text-sm font-semibold ${formData.purpose === p.value ? "text-green-700" : "text-gray-800"}`}>{p.label}</p>
-                                                                    <p className="text-xs text-gray-400 mt-0.5">{p.desc}</p>
+                                                                    <div className={`w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5 ${formData.purpose === p.value ? "bg-green-100" : "bg-gray-100"}`}>
+                                                                        <p.Icon className={`w-4 h-4 ${formData.purpose === p.value ? "text-green-700" : "text-gray-500"}`} />
+                                                                    </div>
+                                                                    <div>
+                                                                        <p className={`text-sm font-semibold ${formData.purpose === p.value ? "text-green-700" : "text-gray-800"}`}>{p.label}</p>
+                                                                        <p className="text-xs text-gray-400 mt-0.5">{p.desc}</p>
+                                                                    </div>
                                                                 </button>
                                                             ))}
                                                         </div>
@@ -463,12 +667,11 @@ export default function RegisterPage() {
                                             {errors.purpose && <p className="text-red-500 text-xs mt-1">{errors.purpose}</p>}
                                             {selectedPurpose && (
                                                 <p className="text-green-700 text-xs mt-1 flex items-center gap-1 font-semibold">
-                                                    <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" /></svg>
+                                                    <IcCheckSm className="w-3 h-3" />
                                                     {selectedPurpose.desc}
                                                 </p>
                                             )}
                                         </div>
-
                                     </div>
                                 </section>
 
@@ -476,7 +679,7 @@ export default function RegisterPage() {
 
                                 {/* CONTACT DETAILS */}
                                 <section>
-                                    <SectionHeading icon="📞" title="Contact Details" />
+                                    <SectionHeading Icon={IcPhone} title="Contact Details" />
                                     <div className="grid sm:grid-cols-2 gap-4">
                                         <div>
                                             <label className="block text-sm font-semibold text-gray-700 mb-1.5">
@@ -484,8 +687,9 @@ export default function RegisterPage() {
                                                 <span className="ml-2 text-xs bg-green-100 text-green-700 px-2 py-0.5 rounded-full font-medium">OTP here</span>
                                             </label>
                                             <div className="flex">
-                                                <div className="flex items-center px-3 bg-gray-50 border border-r-0 border-gray-200 rounded-l-lg text-gray-500 text-sm whitespace-nowrap">
-                                                    🇵🇰 +92
+                                                <div className="flex items-center gap-1.5 px-3 bg-gray-50 border border-r-0 border-gray-200 rounded-l-lg text-gray-500 text-sm whitespace-nowrap">
+                                                    <IcPhone className="w-3.5 h-3.5" />
+                                                    +92
                                                 </div>
                                                 <input
                                                     name="mobile"
@@ -506,7 +710,7 @@ export default function RegisterPage() {
 
                                 {/* SECURITY */}
                                 <section>
-                                    <SectionHeading icon="🔒" title="Account Security" />
+                                    <SectionHeading Icon={IcLock} title="Account Security" />
                                     <div className="grid sm:grid-cols-2 gap-4">
                                         {/* Password */}
                                         <div>
@@ -515,9 +719,7 @@ export default function RegisterPage() {
                                                 <input name="password" type={showPassword ? "text" : "password"} value={formData.password} onChange={handleChange} placeholder="Min. 8 characters"
                                                     className={`w-full border ${errors.password ? "border-red-400 bg-red-50" : "border-gray-200"} rounded-lg px-4 py-3 text-gray-800 text-sm placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-green-700/30 focus:border-green-700 transition-all pr-11`} />
                                                 <button type="button" onClick={() => setShowPassword(!showPassword)} className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-600">
-                                                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d={showPassword ? "M13.875 18.825A10.05 10.05 0 0112 19c-4.478 0-8.268-2.943-9.543-7a9.97 9.97 0 011.563-3.029m5.858.908a3 3 0 114.243 4.243M9.878 9.878l4.242 4.242M9.88 9.88l-3.29-3.29m7.532 7.532l3.29 3.29M3 3l3.59 3.59m0 0A9.953 9.953 0 0112 5c4.478 0 8.268 2.943 9.543 7a10.025 10.025 0 01-4.132 5.411m0 0L21 21" : "M15 12a3 3 0 11-6 0 3 3 0 016 0zM2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"} />
-                                                    </svg>
+                                                    {showPassword ? <IcEyeOff /> : <IcEye />}
                                                 </button>
                                             </div>
                                             {errors.password && <p className="text-red-500 text-xs mt-1">{errors.password}</p>}
@@ -539,15 +741,13 @@ export default function RegisterPage() {
                                                 <input name="confirmPassword" type={showConfirmPassword ? "text" : "password"} value={formData.confirmPassword} onChange={handleChange} placeholder="Re-enter password"
                                                     className={`w-full border ${errors.confirmPassword ? "border-red-400 bg-red-50" : formData.confirmPassword && formData.confirmPassword === formData.password ? "border-green-400 bg-green-50" : "border-gray-200"} rounded-lg px-4 py-3 text-gray-800 text-sm placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-green-700/30 focus:border-green-700 transition-all pr-11`} />
                                                 <button type="button" onClick={() => setShowConfirmPassword(!showConfirmPassword)} className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-600">
-                                                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d={showConfirmPassword ? "M13.875 18.825A10.05 10.05 0 0112 19c-4.478 0-8.268-2.943-9.543-7a9.97 9.97 0 011.563-3.029m5.858.908a3 3 0 114.243 4.243M9.878 9.878l4.242 4.242M9.88 9.88l-3.29-3.29m7.532 7.532l3.29 3.29M3 3l3.59 3.59m0 0A9.953 9.953 0 0112 5c4.478 0 8.268 2.943 9.543 7a10.025 10.025 0 01-4.132 5.411m0 0L21 21" : "M15 12a3 3 0 11-6 0 3 3 0 016 0zM2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"} />
-                                                    </svg>
+                                                    {showConfirmPassword ? <IcEyeOff /> : <IcEye />}
                                                 </button>
                                             </div>
                                             {errors.confirmPassword && <p className="text-red-500 text-xs mt-1">{errors.confirmPassword}</p>}
                                             {formData.confirmPassword && formData.confirmPassword === formData.password && (
                                                 <p className="text-green-600 text-xs mt-1 flex items-center gap-1">
-                                                    <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" /></svg>
+                                                    <IcCheckSm className="w-3 h-3" />
                                                     Passwords match
                                                 </p>
                                             )}
@@ -559,19 +759,17 @@ export default function RegisterPage() {
 
                                 {/* PROFILE PHOTO */}
                                 <section>
-                                    <SectionHeading icon="🖼️" title="Profile Photo (Optional)" />
+                                    <SectionHeading Icon={IcPhoto} title="Profile Photo (Optional)" />
                                     <div className="flex flex-col sm:flex-row items-start gap-5">
                                         <div className="w-24 h-24 rounded-xl border-2 border-dashed border-gray-300 overflow-hidden flex-shrink-0 bg-gray-50 flex items-center justify-center">
                                             {photoPreview
                                                 ? <img src={photoPreview} alt="Preview" className="w-full h-full object-cover" />
-                                                : <svg className="w-8 h-8 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" /></svg>
+                                                : <IcUserPlaceholder className="w-8 h-8 text-gray-300" />
                                             }
                                         </div>
                                         <div className="flex-1">
                                             <label htmlFor="photo-upload" className="cursor-pointer flex flex-col items-center justify-center border-2 border-dashed border-gray-300 hover:border-green-700 rounded-xl p-5 transition-all bg-gray-50 hover:bg-green-50 group">
-                                                <svg className="w-8 h-8 text-gray-400 group-hover:text-green-700 mb-2 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                                                </svg>
+                                                <IcPhoto className="w-8 h-8 text-gray-400 group-hover:text-green-700 mb-2 transition-colors" />
                                                 <p className="text-sm font-semibold text-gray-600 group-hover:text-green-700 transition-colors">
                                                     {formData.photo ? formData.photo.name : "Click to upload photo"}
                                                 </p>
@@ -591,7 +789,7 @@ export default function RegisterPage() {
                                         onClick={() => { setAgreed(!agreed); setErrors(p => ({ ...p, agreed: "" })); }}
                                     >
                                         <div className={`w-5 h-5 rounded border-2 flex items-center justify-center flex-shrink-0 mt-0.5 transition-all ${agreed ? "bg-green-700 border-green-700" : "border-gray-300 bg-white"}`}>
-                                            {agreed && <svg className="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" /></svg>}
+                                            {agreed && <IcCheckSm className="w-3 h-3 text-white" />}
                                         </div>
                                         <div>
                                             <p className="text-sm text-gray-700 leading-relaxed">
@@ -610,15 +808,15 @@ export default function RegisterPage() {
                                     onClick={handleSubmit}
                                     className="w-full bg-green-700 hover:bg-green-800 text-white font-black text-base py-4 rounded-xl transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5 duration-200 flex items-center justify-center gap-3"
                                 >
-                                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z" />
-                                    </svg>
+                                    <IcUserAdd className="w-5 h-5" />
                                     Create Account
                                 </button>
 
-                                <p className="text-center text-gray-500 text-sm">
+                                <p className="text-center text-gray-500 text-sm flex items-center justify-center gap-1.5">
                                     Already have an account?{" "}
-                                    <a href="/login" className="text-green-700 font-bold hover:underline">👉 Log in here</a>
+                                    <a href="/login" className="text-green-700 font-bold hover:underline flex items-center gap-1">
+                                        <IcArrowLeft className="w-3.5 h-3.5" /> Log in here
+                                    </a>
                                 </p>
                             </div>
                         </div>
@@ -631,9 +829,15 @@ export default function RegisterPage() {
                 <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-gray-400">
                     <p>© 2026 Pakistan Global Competence Council. All rights reserved.</p>
                     <div className="flex items-center gap-4">
-                        <a href="mailto:info@pgcc.gov.pk" className="hover:text-green-400 transition-colors">📧 info@pgcc.gov.pk</a>
+                        <a href="mailto:info@pgcc.gov.pk" className="hover:text-green-400 transition-colors flex items-center gap-1.5">
+                            <IcMail className="w-3.5 h-3.5" />
+                            info@pgcc.gov.pk
+                        </a>
                         <span>|</span>
-                        <span>🤝 Partnership with <span className="text-green-400">Government of the UK</span></span>
+                        <span className="flex items-center gap-1.5">
+                            <IcHandshake className="w-3.5 h-3.5" />
+                            Partnership with <span className="text-green-400 ml-1">Government of the UK</span>
+                        </span>
                     </div>
                 </div>
             </footer>
@@ -641,10 +845,12 @@ export default function RegisterPage() {
     );
 }
 
-function SectionHeading({ icon, title }: { icon: string; title: string }) {
+function SectionHeading({ Icon, title }: { Icon: React.ComponentType<{ className?: string }>; title: string }) {
     return (
         <div className="flex items-center gap-2 mb-4">
-            <div className="w-8 h-8 bg-green-100 rounded-lg flex items-center justify-center text-base">{icon}</div>
+            <div className="w-8 h-8 bg-green-100 rounded-lg flex items-center justify-center">
+                <Icon className="w-4 h-4 text-green-700" />
+            </div>
             <h3 className="font-bold text-gray-900">{title}</h3>
             <div className="flex-1 h-px bg-gray-100" />
         </div>

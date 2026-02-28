@@ -409,7 +409,7 @@ export default function CurriculumPage() {
 
     const NAV_LINKS = [
         { icon: "🏠", label: "Dashboard", href: "/dashboard", active: false },
-        { icon: "📝", label: "Assessment", href: "#", active: false },
+        { icon: "📝", label: "Assessment", href: "/assesment", active: false },
         { icon: "📚", label: "Curriculum", href: "#", active: true },
         { icon: "💳", label: "Payment", href: "#", active: false },
         { icon: "📄", label: "My Certificate", href: "#", active: false },
@@ -512,7 +512,7 @@ export default function CurriculumPage() {
                                         </h1>
                                         <p className="text-white/75 text-sm max-w-xl">Comprehensive preparation for UK life across four core pillars. Study each module, then practice with sample questions before your official assessment.</p>
                                     </div>
-                                    <a href="#" className="flex-shrink-0 flex items-center gap-2 bg-white text-green-700 font-black text-sm px-5 py-3 rounded-xl hover:bg-green-50 transition-all shadow-lg whitespace-nowrap">
+                                    <a href="/assesment" className="flex-shrink-0 flex items-center gap-2 bg-white text-green-700 font-black text-sm px-5 py-3 rounded-xl hover:bg-green-50 transition-all shadow-lg whitespace-nowrap">
                                         <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
                                         Take Full Assessment
                                     </a>
@@ -721,7 +721,7 @@ export default function CurriculumPage() {
                                 <h3 className="font-black text-xl mb-1" style={{ fontFamily: "Merriweather,serif" }}>Ready for the full assessment?</h3>
                                 <p className="text-white/75 text-sm">30 questions · 45 minutes · 75% to pass · Digitally verified certificate</p>
                             </div>
-                            <a href="#" className="flex-shrink-0 flex items-center gap-2 bg-white text-green-700 font-black text-sm px-6 py-3.5 rounded-xl hover:bg-green-50 transition-all shadow-md whitespace-nowrap">
+                            <a href="/assesment" className="flex-shrink-0 flex items-center gap-2 bg-white text-green-700 font-black text-sm px-6 py-3.5 rounded-xl hover:bg-green-50 transition-all shadow-md whitespace-nowrap">
                                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
                                 Start Official Assessment
                             </a>
