@@ -442,7 +442,7 @@ export default function DashboardPage() {
                                     { step: "Account Created & CNIC Verified via NADRA", done: true },
                                     { step: "Training Programme Completed", done: false },
                                     { step: "Assessment Passed (75%+ required)", done: false },
-                                    { step: "Fee Paid (PKR 4,500)", done: false },
+                                    { step: "Fee Paid (PKR 15,000)", done: false },
                                     { step: "PGCC Certificate Issued & Passport Linked", done: false },
                                 ].map((item, i) => (
                                     <div key={item.step} className="flex items-center gap-3">
@@ -483,7 +483,7 @@ export default function DashboardPage() {
                                     {[
                                         { Icon: IcPlay, label: "Start / Resume Assessment", sub: "Hybrid exam · pass with 75% to get certified", cta: "Start Now", primary: true, done: false, href: "/assesment" },
                                         { Icon: IcBook, label: "View Curriculum", sub: "Four core competency areas — cultural, professional, ethical, legal", cta: "View", primary: false, done: false, href: "#" },
-                                        { Icon: IcCreditCard, label: "Pay Assessment Fee", sub: "PKR 4,500 — one-time certification fee", cta: "Pay Now", primary: false, done: false, href: "#" },
+                                        { Icon: IcCreditCard, label: "Pay Assessment Fee", sub: "PKR 15,000 — one-time certification fee", cta: "Pay Now", primary: false, done: false, href: "#" },
                                         { Icon: IcDownload, label: "Download Study Material", sub: "Practice guides & sample questions", cta: "Download", primary: false, done: false, href: "#" },
                                     ].map(action => (
                                         <div key={action.label} className={`flex items-center justify-between gap-3 p-3.5 rounded-xl border transition-all ${action.done ? "bg-green-50 border-green-200" : "border-gray-100 hover:border-green-200 hover:bg-green-50/50"}`}>
@@ -617,7 +617,7 @@ export default function DashboardPage() {
                                 <p className="text-white/75 text-sm">Hybrid exam (online or in-person) · Pass with 75% · Certificate linked to NADRA & Passport</p>
                                 <div className="flex items-center gap-4 mt-3 text-sm">
                                     <span className="flex items-center gap-1.5"><span className="w-1.5 h-1.5 bg-green-300 rounded-full inline-block" />2 attempts remaining</span>
-                                    <span className="flex items-center gap-1.5"><span className="w-1.5 h-1.5 bg-green-300 rounded-full inline-block" />PKR 4,500 one-time fee</span>
+                                    <span className="flex items-center gap-1.5"><span className="w-1.5 h-1.5 bg-green-300 rounded-full inline-block" />PKR 15,000 one-time fee</span>
                                 </div>
                             </div>
                             <a href="/assesment" className="flex-shrink-0 flex items-center gap-2 bg-white text-green-700 font-black text-sm px-6 py-3.5 rounded-xl hover:bg-green-50 transition-all shadow-md whitespace-nowrap">

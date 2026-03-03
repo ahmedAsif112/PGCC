@@ -1,5 +1,6 @@
 "use client";
-
+import mofa from "../assets/mofa.png"
+import Image from "next/image";
 import { useEffect, useState, useRef } from "react";
 import { createPortal } from "react-dom";
 
@@ -625,7 +626,7 @@ export default function Home() {
           </h1>
 
           <p className="text-white/85 text-lg sm:text-xl max-w-2xl mx-auto mb-4 leading-relaxed">
-            The Pakistan Global Competence Council equips Pakistani citizens with the skills, certifications, and global readiness needed to thrive internationally — ensuring you arrive <strong className="text-white">Compliant, Prepared & Ready to Succeed.</strong>
+            The Pakistan Global Competence Council equips Pakistani citizens with the skills, certifications, and global readiness needed to thrive internationally ensuring you arrive <strong className="text-white">Compliant, Prepared & Ready to Succeed.</strong>
           </p>
           <p className="text-white/60 text-sm mb-8">
             A <span className="text-green-300 font-semibold">National Strategic Initiative</span> · In Partnership with the Government of Pakistan
@@ -675,7 +676,7 @@ export default function Home() {
           <div className="mt-16 grid grid-cols-3 gap-4 max-w-xl mx-auto">
             {[
               { val: "800K+", label: "Pakistanis migrated for work in 2022", Icon: IconUsers },
-              { val: "PKR 4,500", label: "Certification assessment fee", Icon: IconCurrency },
+              { val: "PKR 15,000", label: "Certification assessment fee", Icon: IconCurrency },
               { val: "40–45%", label: "Visa rejection rate without PGCC", Icon: IconBadgeCheck },
             ].map((s) => (
               <div key={s.val} className="bg-white/10 backdrop-blur border border-white/20 rounded-xl p-4">
@@ -704,7 +705,7 @@ export default function Home() {
               Key Challenges Driving This Initiative
             </h2>
             <p className="text-gray-500 mt-3 max-w-xl mx-auto">
-              Over 800,000 Pakistanis migrated for work in 2022 alone — yet critical gaps in preparation continue to create vulnerabilities for citizens and damage Pakistan's global image.
+              Over 800,000 Pakistanis migrated for work in 2022 alone, yet critical gaps in preparation continue to create vulnerabilities for citizens and damage Pakistan's global image.
             </p>
           </div>
 
@@ -731,12 +732,6 @@ export default function Home() {
             ))}
           </div>
 
-          {/* Revenue potential banner */}
-          <div className="mt-10 bg-gradient-to-r from-[#0d4f1e] to-[#1a7a35] rounded-2xl p-8 text-white text-center">
-            <p className="text-sm font-semibold text-green-300 uppercase tracking-widest mb-2">PGCC Revenue Potential</p>
-            <p className="font-display text-4xl sm:text-5xl font-black mb-3">346M – 1.5B PKR</p>
-            <p className="text-white/80 text-base">Projected monthly revenue from mandatory competency certification across Pakistan's visa applicants</p>
-          </div>
         </div>
       </section>
 
@@ -746,7 +741,7 @@ export default function Home() {
           <div className="text-center mb-14">
             <GreenLabel>Process</GreenLabel>
             <h2 className="font-display text-3xl sm:text-4xl font-black text-gray-900 mt-2">How It Works</h2>
-            <p className="text-gray-500 mt-3 max-w-lg mx-auto">Five straightforward steps to obtain your Mandatory PGCC Competency Certificate — a prerequisite for all international visa applications.</p>
+            <p className="text-gray-500 mt-3 max-w-lg mx-auto">Five straightforward steps to obtain your Mandatory PGCC Competency Certificate, a prerequisite for all international visa applications.</p>
           </div>
 
           <div className="relative">
@@ -756,7 +751,7 @@ export default function Home() {
               {[
                 { step: 1, Icon: IconClipboard, title: "Register", desc: "Sign up using your CNIC and personal details on the national PGCC portal." },
                 { step: 2, Icon: IconPencil, title: "Training", desc: "Complete certified online or in-person training across four core competency areas." },
-                { step: 3, Icon: IconCreditCard, title: "Pay Fee", desc: "Pay PKR 4,500 to unlock and access the full assessment and examination." },
+                { step: 3, Icon: IconCreditCard, title: "Pay Fee", desc: "Pay PKR 15,000 to unlock and access the full assessment and examination." },
                 { step: 4, Icon: IconAward, title: "Get Certified", desc: "Receive your digitally verified PGCC Certificate linked to your NADRA ID and passport." },
                 { step: 5, Icon: IconPlane, title: "Apply for Visa", desc: "Present your PGCC Certificate as a mandatory requirement with your visa application." },
               ].map((s) => (
@@ -807,7 +802,7 @@ export default function Home() {
                 href="#register"
                 className="inline-flex items-center gap-2 bg-[#1a7a35] hover:bg-[#155e28] text-white font-bold px-8 py-4 rounded-lg transition-all shadow-md hover:shadow-lg"
               >
-                Get Your Certificate — PKR 4,500
+                Get Your Certificate: PKR 15,000
                 <IconArrowRight />
               </a>
             </div>
@@ -843,7 +838,7 @@ export default function Home() {
                     </div>
                     <div className="flex items-center justify-between pt-4 border-t border-gray-100">
                       <div>
-                        <p className="text-2xl font-black text-[#1a7a35] font-display">PKR 4,500</p>
+                        <p className="text-2xl font-black text-[#1a7a35] font-display">PKR 15,000</p>
                         <p className="text-xs text-gray-400">One-time assessment fee</p>
                       </div>
                       <div className="bg-green-50 border border-green-200 text-green-700 text-xs font-bold px-3 py-1.5 rounded-full flex items-center gap-1.5">
@@ -960,7 +955,7 @@ export default function Home() {
               </p>
               <div className="space-y-5">
                 {[
-                  { label: "Cultural Intelligence & Cross-cultural Skills", count: "Online / In-person", color: "bg-[#1a7a35]", pct: 33 },
+                  { label: "Cultural Intelligence & Cross-cultural Skills", count: "Online ", color: "bg-[#1a7a35]", pct: 33 },
                   { label: "Rights-Based & Legal Knowledge", count: "Exam + Interview", color: "bg-blue-500", pct: 27 },
                   { label: "Visa Readiness & Documentation", color: "bg-red-500", pct: 23, count: "Standardised Test" },
                   { label: "Sector-Specific Professional Skills", color: "bg-purple-500", pct: 17, count: "Track-Based" },
@@ -1014,7 +1009,7 @@ export default function Home() {
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               { Icon: IconTrendingDown, title: "Fewer Visa Rejections", desc: "Reduces visa rejections by 25–40% through standardised preparation, saving applicants time, money, and reputational damage." },
-              { Icon: IconLibrary, title: "Protected Citizens", desc: "Educates Pakistanis on their rights, destination-specific laws, and crisis protocols — reducing exploitation and legal penalties abroad." },
+              { Icon: IconLibrary, title: "Protected Citizens", desc: "Educates Pakistanis on their rights, destination-specific laws, and crisis protocols reducing exploitation and legal penalties abroad." },
               { Icon: IconBriefcase, title: "Higher Remittances", desc: "Places skilled Pakistanis in higher-value roles globally, boosting remittances beyond the current $29.8B annually." },
               { Icon: IconHandshake, title: "Stronger National Image", desc: "Creates informed, skilled ambassadors who elevate Pakistan's global reputation and strengthen bilateral diplomatic relations." },
             ].map((b) => (
@@ -1044,17 +1039,13 @@ export default function Home() {
 
             {/* Government of Pakistan */}
             <div className="border border-gray-200 rounded-2xl p-6 text-center hover:border-[#1a7a35]/40 hover:shadow-md transition-all group">
-              <div className="w-16 h-16 mx-auto mb-4 flex items-center justify-center">
-                <svg viewBox="0 0 64 64" fill="none" className="w-16 h-16">
-                  <circle cx="32" cy="32" r="29" stroke="#01411C" strokeWidth="2.5" fill="none" />
-                  <path d="M10 42 L10 28 L18 35 L32 18 L46 35 L54 28 L54 42 Z" fill="#01411C" />
-                  <path d="M8 42 L56 42 L56 48 L8 48 Z" fill="#01411C" />
-                  <circle cx="10" cy="27" r="3" fill="#FFD700" />
-                  <circle cx="32" cy="17" r="3" fill="#FFD700" />
-                  <circle cx="54" cy="27" r="3" fill="#FFD700" />
-                  <path d="M14 48 L14 54 L50 54 L50 48" fill="#01411C" />
-                  <rect x="8" y="48" width="48" height="4" rx="1" fill="#01411C" />
-                </svg>
+              <div className="w-16 h-16 mx-auto mb-4 relative">
+                <Image
+                  src={mofa}
+                  alt="Government of Pakistan Logo"
+                  fill
+                  className="object-contain"
+                />
               </div>
               <h3 className="font-bold text-gray-900 text-sm mb-1">Government of Pakistan</h3>
               <p className="text-xs text-gray-500">Ministry of Interior & MOFA</p>
@@ -1158,7 +1149,7 @@ export default function Home() {
               Learn More
             </a>
           </div>
-          <p className="text-white/50 text-sm mt-8">PKR 4,500 · NADRA Verified · Mandatory for All International Visa Applications</p>
+          <p className="text-white/50 text-sm mt-8">PKR 15,000 · NADRA Verified · Mandatory for All International Visa Applications</p>
         </div>
       </section>
 

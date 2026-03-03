@@ -62,68 +62,549 @@ function IcStar({ className = "w-5 h-5" }: { className?: string }) {
 
 // ── Question Data ─────────────────────────────────────────────────────────────
 const QUESTIONS = [
+
+    // =============================
+    // 1️⃣ Natural Disasters & Conflicts (5)
+    // =============================
+
     {
         id: 1,
-        category: "Cultural Intelligence",
-        text: "You arrive abroad for work and feel homesick, struggling to adapt to local customs. What is the most globally competent response?",
+        category: "Natural Disasters & Conflicts",
+        text: "During a UK flood, what right do migrants have?",
         options: [
-            { key: "a", text: "Isolate yourself to avoid cultural differences and stick only to Pakistani communities." },
-            { key: "b", text: "Join local community events and multicultural groups to build support networks while respecting local norms." },
-            { key: "c", text: "Ignore local customs entirely to maintain your traditions exclusively." },
-            { key: "d", text: "Complain publicly about the host country on social media." },
+            { key: "a", text: "No aid if on visa." },
+            { key: "b", text: "Equal access to emergency shelters/aid under Civil Contingencies Act." },
+            { key: "c", text: "Deportation priority." },
+            { key: "d", text: "Pay for all services." },
         ],
         correct: "b",
     },
     {
         id: 2,
-        category: "Professional Readiness",
-        text: "Your employer abroad asks you to work extra hours without pay. What action aligns with PGCC's professional readiness framework?",
+        category: "Natural Disasters & Conflicts",
+        text: "If conflict forces you to flee to the UK, what is the proper process?",
         options: [
-            { key: "a", text: "Agree silently to avoid conflict, even if it feels unfair." },
-            { key: "b", text: "Politely raise the issue and report it if needed, knowing that host-country labour laws protect fair pay." },
-            { key: "c", text: "Quit immediately without any discussion." },
-            { key: "d", text: "Demand immediate payment in an aggressive manner." },
+            { key: "a", text: "Enter illegally." },
+            { key: "b", text: "Apply for asylum with valid grounds per 1951 Refugee Convention." },
+            { key: "c", text: "Use visitor visa for work." },
+            { key: "d", text: "Ignore rules." },
         ],
         correct: "b",
     },
     {
         id: 3,
-        category: "Ethical & Civic Conduct",
-        text: "You witness a colleague facing workplace discrimination based on ethnicity at your overseas job. What is the most ethical and civic response?",
+        category: "Natural Disasters & Conflicts",
+        text: "In a natural disaster, can the UK deport you?",
         options: [
-            { key: "a", text: "Ignore it to avoid being involved in a conflict." },
-            { key: "b", text: "Support the colleague and report the incident through the official complaint mechanism available under host-country law." },
-            { key: "c", text: "Withdraw from social interactions at the workplace." },
-            { key: "d", text: "Retaliate on behalf of the colleague without reporting it." },
+            { key: "a", text: "Yes, immediately." },
+            { key: "b", text: "No, temporary protection under UNHCR guidelines may apply." },
+            { key: "c", text: "Only if overstayed." },
+            { key: "d", text: "Based on nationality." },
         ],
         correct: "b",
     },
     {
         id: 4,
-        category: "Visa Readiness & Legal Awareness",
-        text: "You accidentally overstay your work visa abroad. What responsible action does the PGCC framework require?",
+        category: "Natural Disasters & Conflicts",
+        text: "What IOM guideline protects migrants in UK disasters?",
         options: [
-            { key: "a", text: "Continue working illegally and hope no one notices." },
-            { key: "b", text: "Contact the immigration authority immediately to regularise your status or arrange departure." },
-            { key: "c", text: "Blame your employer or recruitment agent for the mistake." },
-            { key: "d", text: "Apply for asylum without any valid grounds." },
+            { key: "a", text: "None." },
+            { key: "b", text: "MICIC: Equal access to evacuation and aid." },
+            { key: "c", text: "Deport first." },
+            { key: "d", text: "Citizens only." },
         ],
         correct: "b",
     },
     {
         id: 5,
-        category: "Crisis Preparedness",
-        text: "There is a civil unrest situation in the country where you are working. What does the PGCC pre-departure training prepare you to do?",
+        category: "Natural Disasters & Conflicts",
+        text: "If war displaces you, abusing asylum claims leads to?",
         options: [
-            { key: "a", text: "Panic and attempt to leave the country through unofficial channels." },
-            { key: "b", text: "Follow the crisis protocol learned in training — contact the Pakistani embassy, register your location, and await official guidance." },
-            { key: "c", text: "Rely solely on social media for evacuation information." },
-            { key: "d", text: "Ignore the situation and continue working as normal." },
+            { key: "a", text: "Automatic approval." },
+            { key: "b", text: "Rejection and penalties under Immigration Act." },
+            { key: "c", text: "No consequences." },
+            { key: "d", text: "Faster visa." },
         ],
         correct: "b",
     },
-];
 
+    // =============================
+    // 2️⃣ Psychological Assessment (10)
+    // =============================
+
+    {
+        id: 6,
+        category: "Psychological Assessment",
+        text: "You arrive in the UK and feel homesick. What is a healthy way to adapt?",
+        options: [
+            { key: "a", text: "Isolate yourself." },
+            { key: "b", text: "Join local Pakistani-UK or multicultural groups." },
+            { key: "c", text: "Ignore local customs." },
+            { key: "d", text: "Complain publicly on social media." },
+        ],
+        correct: "b",
+    },
+    {
+        id: 7,
+        category: "Psychological Assessment",
+        text: "Employer asks for unpaid extra hours. What should you do?",
+        options: [
+            { key: "a", text: "Agree silently." },
+            { key: "b", text: "Politely refuse and report if needed under UK law." },
+            { key: "c", text: "Quit immediately." },
+            { key: "d", text: "Demand aggressively." },
+        ],
+        correct: "b",
+    },
+    {
+        id: 8,
+        category: "Psychological Assessment",
+        text: "Facing discrimination in the UK, what action aligns with UK values?",
+        options: [
+            { key: "a", text: "Retaliate." },
+            { key: "b", text: "Seek support under Equality Act protections." },
+            { key: "c", text: "Withdraw socially." },
+            { key: "d", text: "Ignore it completely." },
+        ],
+        correct: "b",
+    },
+    {
+        id: 9,
+        category: "Psychological Assessment",
+        text: "You accidentally overstay your visa. What responsible step should you take?",
+        options: [
+            { key: "a", text: "Hide it." },
+            { key: "b", text: "Contact the Home Office immediately." },
+            { key: "c", text: "Blame others." },
+            { key: "d", text: "Apply for asylum without valid grounds." },
+        ],
+        correct: "b",
+    },
+    {
+        id: 10,
+        category: "Psychological Assessment",
+        text: "How do you build resilience in colder UK weather and new food?",
+        options: [
+            { key: "a", text: "Complain and avoid adapting." },
+            { key: "b", text: "Learn climate tips and try local food gradually." },
+            { key: "c", text: "Use only imported items." },
+            { key: "d", text: "Isolate yourself." },
+        ],
+        correct: "b",
+    },
+    {
+        id: 11,
+        category: "Psychological Assessment",
+        text: "Overwhelmed by language and culture, what should you do?",
+        options: [
+            { key: "a", text: "Avoid locals." },
+            { key: "b", text: "Join free English classes and cultural groups." },
+            { key: "c", text: "Pretend everything is fine." },
+            { key: "d", text: "Complain daily to family." },
+        ],
+        correct: "b",
+    },
+    {
+        id: 12,
+        category: "Psychological Assessment",
+        text: "At a workplace party, colleagues offer alcohol but you do not drink. What do you do?",
+        options: [
+            { key: "a", text: "Accept anyway." },
+            { key: "b", text: "Politely decline and suggest a non-alcoholic option." },
+            { key: "c", text: "Leave without explanation." },
+            { key: "d", text: "Lecture others." },
+        ],
+        correct: "b",
+    },
+    {
+        id: 13,
+        category: "Psychological Assessment",
+        text: "You miss a deadline due to family issues. What is responsible?",
+        options: [
+            { key: "a", text: "Blame the issue." },
+            { key: "b", text: "Inform manager early and propose a solution." },
+            { key: "c", text: "Ignore it." },
+            { key: "d", text: "Quit job." },
+        ],
+        correct: "b",
+    },
+    {
+        id: 14,
+        category: "Psychological Assessment",
+        text: "You encounter strict queuing rules. How do you adapt?",
+        options: [
+            { key: "a", text: "Ignore rule." },
+            { key: "b", text: "Observe and follow local custom." },
+            { key: "c", text: "Complain loudly." },
+            { key: "d", text: "Avoid such situations." },
+        ],
+        correct: "b",
+    },
+    {
+        id: 15,
+        category: "Psychological Assessment",
+        text: "Tempted to overstay visa due to homesickness. What is ethical?",
+        options: [
+            { key: "a", text: "Stay illegally." },
+            { key: "b", text: "Contact Home Office or return on time." },
+            { key: "c", text: "Apply for asylum without grounds." },
+            { key: "d", text: "Blame system." },
+        ],
+        correct: "b",
+    },
+
+    // =============================
+    // 3️⃣ Purpose of Going & UK Laws (10)
+    // =============================
+
+    {
+        id: 16,
+        category: "Purpose of Going & UK Laws",
+        text: "On a visitor visa, can you work in the UK?",
+        options: [
+            { key: "a", text: "Yes, part-time." },
+            { key: "b", text: "No, strictly prohibited." },
+            { key: "c", text: "Only if unpaid." },
+            { key: "d", text: "Yes, short-term." },
+        ],
+        correct: "b",
+    },
+    {
+        id: 17,
+        category: "Purpose of Going & UK Laws",
+        text: "Penalty for overstaying more than 90 days?",
+        options: [
+            { key: "a", text: "No issue." },
+            { key: "b", text: "Re-entry ban 1–10 years, possible jail/fine." },
+            { key: "c", text: "Warning only." },
+            { key: "d", text: "Automatic extension." },
+        ],
+        correct: "b",
+    },
+    {
+        id: 18,
+        category: "Purpose of Going & UK Laws",
+        text: "If visa obtained by fraud, what happens?",
+        options: [
+            { key: "a", text: "Minor issue." },
+            { key: "b", text: "Mandatory refusal, criminal charges." },
+            { key: "c", text: "Ignore if not caught." },
+            { key: "d", text: "Renew easily." },
+        ],
+        correct: "b",
+    },
+    {
+        id: 19,
+        category: "Purpose of Going & UK Laws",
+        text: "As a student, your main purpose must be?",
+        options: [
+            { key: "a", text: "Work full-time." },
+            { key: "b", text: "Genuine study at approved institution." },
+            { key: "c", text: "Tourism." },
+            { key: "d", text: "Asylum seeking." },
+        ],
+        correct: "b",
+    },
+    {
+        id: 20,
+        category: "Purpose of Going & UK Laws",
+        text: "What law prohibits discrimination based on nationality?",
+        options: [
+            { key: "a", text: "None." },
+            { key: "b", text: "Equality Act 2010." },
+            { key: "c", text: "Immigration Act only." },
+            { key: "d", text: "Visitor rules." },
+        ],
+        correct: "b",
+    },
+    {
+        id: 21,
+        category: "Purpose of Going & UK Laws",
+        text: "Can you switch from visitor visa to work visa inside UK?",
+        options: [
+            { key: "a", text: "Yes always." },
+            { key: "b", text: "No, must apply outside UK unless exceptional." },
+            { key: "c", text: "Only if employer sponsors." },
+            { key: "d", text: "Automatically after 6 months." },
+        ],
+        correct: "b",
+    },
+    {
+        id: 22,
+        category: "Purpose of Going & UK Laws",
+        text: "Fine for employing someone without right to work?",
+        options: [
+            { key: "a", text: "£100." },
+            { key: "b", text: "Up to £20,000 per worker." },
+            { key: "c", text: "No fine." },
+            { key: "d", text: "Warning only." },
+        ],
+        correct: "b",
+    },
+    {
+        id: 23,
+        category: "Purpose of Going & UK Laws",
+        text: "Overstay less than 30 days with good reason?",
+        options: [
+            { key: "a", text: "Automatic ban." },
+            { key: "b", text: "May not trigger re-entry ban if reasonable cause." },
+            { key: "c", text: "Jail time." },
+            { key: "d", text: "Visa automatically extended." },
+        ],
+        correct: "b",
+    },
+    {
+        id: 24,
+        category: "Purpose of Going & UK Laws",
+        text: "What constitutes asylum abuse?",
+        options: [
+            { key: "a", text: "Genuine fear." },
+            { key: "b", text: "Applying without valid grounds." },
+            { key: "c", text: "Overstaying legally." },
+            { key: "d", text: "Switching visas." },
+        ],
+        correct: "b",
+    },
+    {
+        id: 25,
+        category: "Purpose of Going & UK Laws",
+        text: "Under what act can you be deported for criminal activity?",
+        options: [
+            { key: "a", text: "Equality Act." },
+            { key: "b", text: "Immigration Act 2014." },
+            { key: "c", text: "Modern Slavery Act." },
+            { key: "d", text: "No deportation." },
+        ],
+        correct: "b",
+    },
+
+    // =============================
+    // 4️⃣ General Knowledge (8)
+    // =============================
+
+    {
+        id: 26,
+        category: "General Knowledge",
+        text: "What is Lent in UK culture?",
+        options: [
+            { key: "a", text: "40 days before Easter (Christian fasting period)." },
+            { key: "b", text: "Summer festival." },
+            { key: "c", text: "New Year tradition." },
+            { key: "d", text: "Political event." },
+        ],
+        correct: "a",
+    },
+    {
+        id: 27,
+        category: "General Knowledge",
+        text: "Which country's flag is NOT in the Union Flag?",
+        options: [
+            { key: "a", text: "Wales." },
+            { key: "b", text: "England." },
+            { key: "c", text: "Scotland." },
+            { key: "d", text: "Northern Ireland." },
+        ],
+        correct: "a",
+    },
+    {
+        id: 28,
+        category: "General Knowledge",
+        text: "What is the judiciary responsible for?",
+        options: [
+            { key: "a", text: "Making laws." },
+            { key: "b", text: "Interpreting and enforcing laws independently." },
+            { key: "c", text: "Elections." },
+            { key: "d", text: "Taxes." },
+        ],
+        correct: "b",
+    },
+    {
+        id: 29,
+        category: "General Knowledge",
+        text: "When did the Habeas Corpus Act become law?",
+        options: [
+            { key: "a", text: "1679." },
+            { key: "b", text: "1945." },
+            { key: "c", text: "1066." },
+            { key: "d", text: "2000." },
+        ],
+        correct: "a",
+    },
+    {
+        id: 30,
+        category: "General Knowledge",
+        text: "What promotes equality under law in the UK?",
+        options: [
+            { key: "a", text: "Monarchy only." },
+            { key: "b", text: "Rule of law." },
+            { key: "c", text: "No equality." },
+            { key: "d", text: "Wealth-based system." },
+        ],
+        correct: "b",
+    },
+    {
+        id: 31,
+        category: "General Knowledge",
+        text: "Who is the head of state in the UK?",
+        options: [
+            { key: "a", text: "Prime Minister." },
+            { key: "b", text: "Monarch (King Charles III)." },
+            { key: "c", text: "Parliament Speaker." },
+            { key: "d", text: "Home Secretary." },
+        ],
+        correct: "b",
+    },
+    {
+        id: 32,
+        category: "General Knowledge",
+        text: "What is the UK's national anthem?",
+        options: [
+            { key: "a", text: "Land of Hope and Glory." },
+            { key: "b", text: "God Save the King." },
+            { key: "c", text: "Rule Britannia." },
+            { key: "d", text: "Jerusalem." },
+        ],
+        correct: "b",
+    },
+    {
+        id: 33,
+        category: "General Knowledge",
+        text: "When is Remembrance Day observed?",
+        options: [
+            { key: "a", text: "November 11." },
+            { key: "b", text: "May 8." },
+            { key: "c", text: "June 6." },
+            { key: "d", text: "August 15." },
+        ],
+        correct: "a",
+    },
+
+    // =============================
+    // 5️⃣ Your Own Rights (10)
+    // =============================
+
+    {
+        id: 34,
+        category: "Your Own Rights",
+        text: "If employer does not pay wages, what right do you have?",
+        options: [
+            { key: "a", text: "No recourse." },
+            { key: "b", text: "Report to ACAS or employment tribunal under Employment Rights Act 1996." },
+            { key: "c", text: "Accept it." },
+            { key: "d", text: "Leave without notice." },
+        ],
+        correct: "b",
+    },
+    {
+        id: 35,
+        category: "Your Own Rights",
+        text: "What protects you from racial discrimination at work?",
+        options: [
+            { key: "a", text: "None." },
+            { key: "b", text: "Equality Act 2010." },
+            { key: "c", text: "Ignore it." },
+            { key: "d", text: "Retaliate." },
+        ],
+        correct: "b",
+    },
+    {
+        id: 36,
+        category: "Your Own Rights",
+        text: "What ensures NHS access after paying Immigration Health Surcharge?",
+        options: [
+            { key: "a", text: "Only citizens get NHS." },
+            { key: "b", text: "Paying surcharge grants access to most NHS services." },
+            { key: "c", text: "Private only." },
+            { key: "d", text: "No healthcare rights." },
+        ],
+        correct: "b",
+    },
+    {
+        id: 37,
+        category: "Your Own Rights",
+        text: "How many hours can students work during term time?",
+        options: [
+            { key: "a", text: "Unlimited." },
+            { key: "b", text: "Up to 20 hours per week." },
+            { key: "c", text: "No work allowed." },
+            { key: "d", text: "40 hours." },
+        ],
+        correct: "b",
+    },
+    {
+        id: 38,
+        category: "Your Own Rights",
+        text: "What protects you from forced excessive overtime?",
+        options: [
+            { key: "a", text: "No protection." },
+            { key: "b", text: "Modern Slavery Act 2015." },
+            { key: "c", text: "Handle alone." },
+            { key: "d", text: "Quit silently." },
+        ],
+        correct: "b",
+    },
+    {
+        id: 39,
+        category: "Your Own Rights",
+        text: "Current National Living Wage (21+)?",
+        options: [
+            { key: "a", text: "£8.50." },
+            { key: "b", text: "£12.57 per hour." },
+            { key: "c", text: "£15.00." },
+            { key: "d", text: "No minimum wage." },
+        ],
+        correct: "b",
+    },
+    {
+        id: 40,
+        category: "Your Own Rights",
+        text: "What law protects against domestic abuse?",
+        options: [
+            { key: "a", text: "None." },
+            { key: "b", text: "Domestic Abuse Act 2021." },
+            { key: "c", text: "Family only." },
+            { key: "d", text: "Ignore to avoid deportation." },
+        ],
+        correct: "b",
+    },
+    {
+        id: 41,
+        category: "Your Own Rights",
+        text: "After 2 years employment, what law protects against unfair dismissal?",
+        options: [
+            { key: "a", text: "Equality Act." },
+            { key: "b", text: "Employment Rights Act 1996." },
+            { key: "c", text: "Immigration Act." },
+            { key: "d", text: "No law." },
+        ],
+        correct: "b",
+    },
+    {
+        id: 42,
+        category: "Your Own Rights",
+        text: "Denied promotion due to gender — what protects you?",
+        options: [
+            { key: "a", text: "No protection." },
+            { key: "b", text: "Equality Act 2010." },
+            { key: "c", text: "Accept it." },
+            { key: "d", text: "Quit immediately." },
+        ],
+        correct: "b",
+    },
+    {
+        id: 43,
+        category: "Your Own Rights",
+        text: "Are migrant workers entitled to paid holiday?",
+        options: [
+            { key: "a", text: "No." },
+            { key: "b", text: "Yes, at least 5.6 weeks per year under Working Time Regulations 1998." },
+            { key: "c", text: "Only if employer agrees." },
+            { key: "d", text: "Unlimited unpaid leave." },
+        ],
+        correct: "b",
+    },
+
+];
 const TOTAL_TIME = 45; // seconds per question
 
 // ── Category color map ────────────────────────────────────────────────────────
@@ -304,7 +785,9 @@ export default function AssessmentPage() {
                                 Assessment Categories
                             </h2>
                             <div className="flex flex-wrap gap-2">
-                                {QUESTIONS.map(q => (
+                                {QUESTIONS.filter((q, index, self) =>
+                                    index === self.findIndex(t => t.category === q.category)
+                                ).map(q => (
                                     <span key={q.id} className={`text-xs font-semibold px-3 py-1 rounded-full border ${CATEGORY_COLORS[q.category] || "bg-gray-100 text-gray-600 border-gray-200"}`}>
                                         {q.category}
                                     </span>
@@ -601,20 +1084,7 @@ export default function AssessmentPage() {
 
                         {/* Footer: next button + progress dots */}
                         <div className="px-6 pb-6 flex items-center justify-between">
-                            {/* Dot indicators */}
-                            <div className="flex items-center gap-1.5">
-                                {QUESTIONS.map((_, i) => (
-                                    <div
-                                        key={i}
-                                        className={`rounded-full transition-all duration-300 ${i < current
-                                            ? "w-2 h-2 bg-green-600"
-                                            : i === current
-                                                ? "w-4 h-2 bg-green-700"
-                                                : "w-2 h-2 bg-gray-200"
-                                            }`}
-                                    />
-                                ))}
-                            </div>
+
 
                             {/* Next / Submit button */}
                             <button
