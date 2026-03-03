@@ -744,7 +744,7 @@ export default function AssessmentPage() {
                         {/* Stats row */}
                         <div className="grid grid-cols-3 gap-4">
                             {[
-                                { label: "Questions", value: "5", sub: "Scenario-based" },
+                                { label: "Questions", value: "43", sub: "Scenario-based" },
                                 { label: "Time per Q", value: "45s", sub: "Auto-advances" },
                                 { label: "Pass Score", value: "75%", sub: "To certify" },
                             ].map(s => (
