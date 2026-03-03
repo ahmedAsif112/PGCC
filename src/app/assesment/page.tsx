@@ -742,6 +742,7 @@ export default function AssessmentPage() {
                     <div className="w-full max-w-2xl space-y-5">
 
                         {/* Stats row */}
+                        {/* Stats row */}
                         <div className="grid grid-cols-3 gap-4">
                             {[
                                 { label: "Questions", value: "43", sub: "Scenario-based" },
