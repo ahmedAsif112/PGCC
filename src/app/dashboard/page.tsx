@@ -482,31 +482,31 @@ export default function DashboardPage() {
                                 <div className="space-y-3">
                                     {[
                                         { Icon: IcPlay, label: "Start / Resume Assessment", sub: "Hybrid exam · pass with 75% to get certified", cta: "Start Now", primary: true, done: false, href: "/assesment" },
-                                        { Icon: IcBook, label: "View Curriculum", sub: "Four core competency areas — cultural, professional, ethical, legal", cta: "View", primary: false, done: false, href: "#" },
+                                        { Icon: IcBook, label: "Practice Curriculum", sub: "Four core competency areas — cultural, professional, ethical, legal", cta: "View", primary: false, done: false, href: "/curriculum" },
                                         { Icon: IcCreditCard, label: "Pay Assessment Fee", sub: "PKR 15,000 — one-time certification fee", cta: "Pay Now", primary: false, done: false, href: "#" },
-                                        { Icon: IcDownload, label: "Download Study Material", sub: "Practice guides & sample questions", cta: "Download", primary: false, done: false, href: "#" },
-                                    ].map(action => (
-                                        <div key={action.label} className={`flex items-center justify-between gap-3 p-3.5 rounded-xl border transition-all ${action.done ? "bg-green-50 border-green-200" : "border-gray-100 hover:border-green-200 hover:bg-green-50/50"}`}>
-                                            <div className="flex items-center gap-3">
-                                                <action.Icon className={`w-5 h-5 flex-shrink-0 ${action.done ? "text-green-600" : "text-gray-400"}`} />
-                                                <div>
-                                                    <p className="text-sm font-bold text-gray-800">{action.label}</p>
-                                                    <p className="text-xs text-gray-400">{action.sub}</p>
+                                        { Icon: IcDownload, label: "Download Study Material", sub: "Practice guides & sample questions", cta: "Download", primary: false, done: false, href: "/curriculum-guide.pdf" },].map(action => (
+                                            <div key={action.label} className={`flex items-center justify-between gap-3 p-3.5 rounded-xl border transition-all ${action.done ? "bg-green-50 border-green-200" : "border-gray-100 hover:border-green-200 hover:bg-green-50/50"}`}>
+                                                <div className="flex items-center gap-3">
+                                                    <action.Icon className={`w-5 h-5 flex-shrink-0 ${action.done ? "text-green-600" : "text-gray-400"}`} />
+                                                    <div>
+                                                        <p className="text-sm font-bold text-gray-800">{action.label}</p>
+                                                        <p className="text-xs text-gray-400">{action.sub}</p>
+                                                    </div>
                                                 </div>
+                                                <a href={action.href}
+                                                    download={action.href.endsWith('.pdf') ? true : undefined}
+                                                    className={`flex-shrink-0 text-xs font-black px-3 py-1.5 rounded-lg transition-all flex items-center gap-1 ${action.done
+                                                        ? "bg-green-100 text-green-700 cursor-default"
+                                                        : action.primary
+                                                            ? "bg-green-700 text-white hover:bg-green-800 shadow-sm"
+                                                            : "border border-green-700 text-green-700 hover:bg-green-50"
+                                                        }`}
+                                                >
+                                                    {action.done && <IcCheck className="w-3 h-3" />}
+                                                    {action.cta}
+                                                </a>
                                             </div>
-                                            <a href={action.href}
-                                                className={`flex-shrink-0 text-xs font-black px-3 py-1.5 rounded-lg transition-all flex items-center gap-1 ${action.done
-                                                    ? "bg-green-100 text-green-700 cursor-default"
-                                                    : action.primary
-                                                        ? "bg-green-700 text-white hover:bg-green-800 shadow-sm"
-                                                        : "border border-green-700 text-green-700 hover:bg-green-50"
-                                                    }`}
-                                            >
-                                                {action.done && <IcCheck className="w-3 h-3" />}
-                                                {action.cta}
-                                            </a>
-                                        </div>
-                                    ))}
+                                        ))}
                                 </div>
                             </div>
 
@@ -582,10 +582,9 @@ export default function DashboardPage() {
                                         </div>
                                         <IcChevronRight className="w-4 h-4 text-gray-300 group-hover:text-green-600 ml-auto flex-shrink-0 transition-colors" />
                                     </a>
-                                    <a href="#" className="flex items-center gap-3 p-3.5 rounded-xl border border-gray-100 hover:border-green-200 hover:bg-green-50/50 transition-all group">
-                                        <div className="w-9 h-9 bg-purple-50 border border-purple-200 rounded-lg flex items-center justify-center flex-shrink-0">
-                                            <IcBook className="w-4 h-4 text-purple-500" />
-                                        </div>
+                                    <a href="/curriculum-guide.pdf" download className="flex items-center gap-3 p-3.5 rounded-xl border border-gray-100 hover:border-green-200 hover:bg-green-50/50 transition-all group">                                        <div className="w-9 h-9 bg-purple-50 border border-purple-200 rounded-lg flex items-center justify-center flex-shrink-0">
+                                        <IcBook className="w-4 h-4 text-purple-500" />
+                                    </div>
                                         <div>
                                             <p className="text-sm font-bold text-gray-800 group-hover:text-green-700 transition-colors">Curriculum Guide</p>
                                             <p className="text-xs text-gray-400">Download the full PGCC competency study material PDF</p>

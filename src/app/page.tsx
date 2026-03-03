@@ -3,7 +3,7 @@ import mofa from "../assets/mofa.png"
 import Image from "next/image";
 import { useEffect, useState, useRef } from "react";
 import { createPortal } from "react-dom";
-
+import { Star } from "lucide-react";
 // ── Professional SVG Icon Components ──────────────────────────────────────────
 
 function IconUsers({ className = "w-5 h-5" }: { className?: string }) {
@@ -675,7 +675,7 @@ export default function Home() {
           {/* Hero stats */}
           <div className="mt-16 grid grid-cols-3 gap-4 max-w-xl mx-auto">
             {[
-              { val: "800K+", label: "Pakistanis migrated for work in 2022", Icon: IconUsers },
+              { val: "800K+", label: "Pakistanis migrated in 2025", Icon: IconUsers },
               { val: "PKR 15,000", label: "Certification assessment fee", Icon: IconCurrency },
               { val: "40–45%", label: "Visa rejection rate without PGCC", Icon: IconBadgeCheck },
             ].map((s) => (
@@ -705,7 +705,7 @@ export default function Home() {
               Key Challenges Driving This Initiative
             </h2>
             <p className="text-gray-500 mt-3 max-w-xl mx-auto">
-              Over 800,000 Pakistanis migrated for work in 2022 alone, yet critical gaps in preparation continue to create vulnerabilities for citizens and damage Pakistan's global image.
+              Over 800,000 Pakistanis migrated in 2025 alone, yet critical gaps in preparation continue to create vulnerabilities for citizens and damage Pakistan's global image.
             </p>
           </div>
 
@@ -714,7 +714,7 @@ export default function Home() {
               { Icon: IconDocText, stat: "40–45%", label: "Visa Rejection Rate", desc: "Pakistani applicants face rejection rates as high as 45% in USA, UK & Canada due to poor documentation and communication gaps.", border: "border-red-200", badge: "bg-red-50 text-red-700", iconColor: "text-red-500" },
               { Icon: IconCash, stat: "$29.8B", label: "Remittances at Risk", desc: "Pakistan's $29.8B in annual remittances (2023) rely on low-skilled labour with untapped potential from skilled migrants.", border: "border-orange-200", badge: "bg-orange-50 text-orange-700", iconColor: "text-orange-500" },
               { Icon: IconBriefcase, stat: "Millions", label: "Exploited Workers Abroad", desc: "Pakistani labourers face wage theft, poor conditions and legal penalties due to ignorance of their rights in foreign countries.", border: "border-yellow-200", badge: "bg-yellow-50 text-yellow-700", iconColor: "text-yellow-600" },
-              { Icon: IconHospital, stat: "Fragmented", label: "Skill Development Gap", desc: "NAVTTC and TEVTA programs are uncoordinated and misaligned with global demands, limiting international employability.", border: "border-blue-200", badge: "bg-blue-50 text-blue-700", iconColor: "text-blue-500" },
+              { Icon: IconHospital, stat: "Fragmented", label: "Skill Development Gap", desc: "legal awareness, crisis readiness, and ethical leadership, so you come back not just richer but wiser, safer, and ready to build a better Pakistan.", border: "border-blue-200", badge: "bg-blue-50 text-blue-700", iconColor: "text-blue-500" },
             ].map((c) => (
               <div
                 key={c.label}
@@ -785,7 +785,7 @@ export default function Home() {
               </p>
               <div className="space-y-3 mb-8">
                 {[
-                  "Reduces visa rejection rates by 25–40% through standardized preparation",
+                  "One certificate that protects your rights, boosts your earnings, and elevates Pakistan's global reputation.",
                   "Digitally verified and linked to your NADRA Smart ID & Passport",
                   "Required for all international visa categories from Pakistan",
                   "Protects citizens from exploitation, legal penalties, and crises abroad",
@@ -802,7 +802,7 @@ export default function Home() {
                 href="#register"
                 className="inline-flex items-center gap-2 bg-[#1a7a35] hover:bg-[#155e28] text-white font-bold px-8 py-4 rounded-lg transition-all shadow-md hover:shadow-lg"
               >
-                Get Your Certificate: PKR 15,000
+                Get Your Certificate
                 <IconArrowRight />
               </a>
             </div>
@@ -838,13 +838,8 @@ export default function Home() {
                     </div>
                     <div className="flex items-center justify-between pt-4 border-t border-gray-100">
                       <div>
-                        <p className="text-2xl font-black text-[#1a7a35] font-display">PKR 15,000</p>
-                        <p className="text-xs text-gray-400">One-time assessment fee</p>
                       </div>
-                      <div className="bg-green-50 border border-green-200 text-green-700 text-xs font-bold px-3 py-1.5 rounded-full flex items-center gap-1.5">
-                        <IconBadgeCheck className="w-3.5 h-3.5" />
-                        NADRA Verified
-                      </div>
+
                     </div>
                   </div>
                   <div className="flex h-1.5">
@@ -1002,22 +997,50 @@ export default function Home() {
       {/* ── BENEFITS ── */}
       <section id="benefits" className="py-20 px-4 sm:px-6 bg-gray-50">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-14">
+          <div className="text-center mb-4">
             <GreenLabel>Benefits</GreenLabel>
-            <h2 className="font-display text-3xl sm:text-4xl font-black text-gray-900 mt-2">Benefits to Pakistan & the World</h2>
+            <h2 className="font-display text-3xl sm:text-4xl font-black text-gray-900 mt-2">
+              Why PGCC Is Pakistan's Smartest Move Abroad
+            </h2>
+            <p className="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
+              <span className="font-semibold text-[#1a7a35]">One certificate. Endless possibilities.</span>
+              <br />
+              PGCC doesn't just help you get a visa, it helps you build a legacy.
+            </p>
           </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-14">
             {[
-              { Icon: IconTrendingDown, title: "Fewer Visa Rejections", desc: "Reduces visa rejections by 25–40% through standardised preparation, saving applicants time, money, and reputational damage." },
-              { Icon: IconLibrary, title: "Protected Citizens", desc: "Educates Pakistanis on their rights, destination-specific laws, and crisis protocols reducing exploitation and legal penalties abroad." },
-              { Icon: IconBriefcase, title: "Higher Remittances", desc: "Places skilled Pakistanis in higher-value roles globally, boosting remittances beyond the current $29.8B annually." },
-              { Icon: IconHandshake, title: "Stronger National Image", desc: "Creates informed, skilled ambassadors who elevate Pakistan's global reputation and strengthen bilateral diplomatic relations." },
+              {
+                Icon: IconTrendingDown,
+                title: "Dreams Protected – Rejections Slashed",
+                desc: "No more heartbreaking refusals. No more wasted fees. PGCC's rigorous, government-aligned preparation boosts your visa success rate by 30–45% — giving you the confidence that your dream journey won't be stopped by doubt.",
+              },
+              {
+                Icon: IconLibrary,
+                title: "Dignity Secured – You Are Never Alone",
+                desc: "Exploitation ends the moment you know your rights. PGCC arms you with destination laws, workplace protections, crisis protocols, and emergency helplines — so you walk tall, never in fear, no matter where life takes you.",
+              },
+              {
+                Icon: IconBriefcase,
+                title: "Families Uplifted – Wealth That Lasts Generations",
+                desc: "Higher skills. Better roles. Bigger earnings. PGCC positions Pakistanis for premium global opportunities — transforming remittances from survival money into generational wealth that builds homes, educates children, and strengthens communities back home.",
+              },
+              {
+                Icon: IconHandshake,
+                title: "Nation Elevated – Proud Ambassadors Worldwide",
+                desc: "Every certified Pakistani becomes a living advertisement for our talent, discipline, and integrity. PGCC turns migrants into respected global representatives — improving Pakistan's image, opening new diplomatic doors, and making the world say: \"Pakistan sends its best.\"",
+              },
+              {
+                Icon: Star,
+                title: "Future Secured: A Legacy Beyond the Visa",
+                desc: "This is not just about leaving Pakistan. It's about returning stronger. PGCC equips you with lifelong skills: legal awareness, crisis readiness, and ethical leadership — so you come back not just richer but wiser, safer, and ready to build a better Pakistan.",
+              },
             ].map((b) => (
               <div
                 key={b.title}
-                className="bg-white border border-gray-200 rounded-2xl p-6 text-center hover:border-[#1a7a35]/40 hover:shadow-lg transition-all group"
+                className="bg-white border border-gray-200 rounded-2xl p-6 hover:border-[#1a7a35]/40 hover:shadow-lg transition-all group"
               >
-                <div className="w-16 h-16 bg-green-50 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-[#1a7a35] transition-all">
+                <div className="w-16 h-16 bg-green-50 rounded-2xl flex items-center justify-center mb-4 group-hover:bg-[#1a7a35] transition-all">
                   <b.Icon className="w-7 h-7 text-[#1a7a35] group-hover:text-white transition-colors" />
                 </div>
                 <h3 className="font-bold text-gray-900 mb-2">{b.title}</h3>
@@ -1069,24 +1092,33 @@ export default function Home() {
               <p className="text-xs text-gray-500">Identity & Digital Integration</p>
             </div>
 
-            {/* HEC / NAVTTC */}
+            {/* Embassy */}
             <div className="border border-gray-200 rounded-2xl p-6 text-center hover:border-[#1a7a35]/40 hover:shadow-md transition-all group">
               <div className="w-16 h-16 mx-auto mb-4 flex items-center justify-center">
                 <svg viewBox="0 0 64 64" fill="none" className="w-16 h-16">
-                  <rect x="8" y="54" width="48" height="4" rx="1" fill="#1a3a6b" />
-                  <rect x="8" y="18" width="48" height="4" rx="1" fill="#1a3a6b" />
-                  <path d="M10 18 L32 6 L54 18 Z" fill="#1a3a6b" />
-                  <rect x="12" y="22" width="5" height="32" rx="1" fill="#2a5298" />
-                  <rect x="21" y="22" width="5" height="32" rx="1" fill="#2a5298" />
-                  <rect x="30" y="22" width="5" height="32" rx="1" fill="#2a5298" />
-                  <rect x="39" y="22" width="5" height="32" rx="1" fill="#2a5298" />
-                  <rect x="48" y="22" width="5" height="32" rx="1" fill="#2a5298" />
-                  <rect x="6" y="56" width="52" height="3" rx="1" fill="#1a3a6b" />
-                  <rect x="4" y="58" width="56" height="3" rx="1" fill="#1a3a6b" />
+                  {/* Base */}
+                  <rect x="4" y="57" width="56" height="4" rx="1" fill="#1a3a6b" />
+                  {/* Steps */}
+                  <rect x="8" y="53" width="48" height="4" rx="1" fill="#1a3a6b" />
+                  <rect x="12" y="49" width="40" height="4" rx="1" fill="#1a3a6b" />
+                  {/* Columns */}
+                  <rect x="13" y="24" width="5" height="25" rx="1" fill="#2a5298" />
+                  <rect x="22" y="24" width="5" height="25" rx="1" fill="#2a5298" />
+                  <rect x="31" y="24" width="5" height="25" rx="1" fill="#2a5298" />
+                  <rect x="40" y="24" width="5" height="25" rx="1" fill="#2a5298" />
+                  <rect x="49" y="24" width="5" height="25" rx="1" fill="#2a5298" />
+                  {/* Entablature */}
+                  <rect x="10" y="20" width="44" height="4" rx="1" fill="#1a3a6b" />
+                  {/* Pediment / Triangle roof */}
+                  <path d="M8 20 L32 5 L56 20 Z" fill="#1a3a6b" />
+                  {/* Flag pole */}
+                  <rect x="30" y="5" width="2" height="14" rx="1" fill="#c0392b" />
+                  {/* Flag */}
+                  <path d="M32 6 L42 9 L32 12 Z" fill="#c0392b" />
                 </svg>
               </div>
-              <h3 className="font-bold text-gray-900 text-sm mb-1">HEC & NAVTTC</h3>
-              <p className="text-xs text-gray-500">Education & Skills Integration</p>
+              <h3 className="font-bold text-gray-900 text-sm mb-1">Foreign Embassies</h3>
+              <p className="text-xs text-gray-500">Diplomatic & Visa Coordination</p>
             </div>
 
             {/* PGCC */}
@@ -1149,7 +1181,7 @@ export default function Home() {
               Learn More
             </a>
           </div>
-          <p className="text-white/50 text-sm mt-8">PKR 15,000 · NADRA Verified · Mandatory for All International Visa Applications</p>
+          <p className="text-white/50 text-sm mt-8"> Mandatory for All International Visa Applications</p>
         </div>
       </section>
 
@@ -1168,7 +1200,7 @@ export default function Home() {
                 </div>
               </div>
               <p className="text-gray-400 text-sm leading-relaxed">
-                Equipping Pakistani nationals with the skills, certifications, and global readiness needed to thrive internationally while elevating Pakistan's reputation worldwide.
+                Equipping Pakistani nationals with the competency certifications, and global readiness needed to thrive internationally while elevating Pakistan's reputation worldwide.
               </p>
             </div>
             <div>

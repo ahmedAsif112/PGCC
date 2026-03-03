@@ -523,10 +523,10 @@ export default function CurriculumPage() {
                         {/* ASSESSMENT OVERVIEW CARDS */}
                         <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
                             {[
-                                { icon: "❓", val: "30", label: "Total Questions", sub: "Multiple Choice", bg: "bg-gray-50 border-gray-200", text: "text-gray-800" },
-                                { icon: "⏱️", val: "45 min", label: "Time Limit", sub: "Timed Assessment", bg: "bg-blue-50 border-blue-200", text: "text-blue-800" },
-                                { icon: "🎯", val: "75%", label: "Pass Threshold", sub: "22/30 correct", bg: "bg-green-50 border-green-200", text: "text-green-800" },
-                                { icon: "📋", val: "4", label: "Core Modules", sub: "Scenario-based", bg: "bg-purple-50 border-purple-200", text: "text-purple-800" },
+                                { val: "30", label: "Total Questions", sub: "Multiple Choice", bg: "bg-gray-50 border-gray-200", text: "text-gray-800" },
+                                { val: "45 min", label: "Time Limit", sub: "Timed Assessment", bg: "bg-blue-50 border-blue-200", text: "text-blue-800" },
+                                { val: "75%", label: "Pass Threshold", sub: "22/30 correct", bg: "bg-green-50 border-green-200", text: "text-green-800" },
+                                { val: "4", label: "Core Modules", sub: "Scenario-based", bg: "bg-purple-50 border-purple-200", text: "text-purple-800" },
                             ].map(s => (
                                 <div key={s.label} className={`border ${s.bg} rounded-2xl p-4 text-center hover:shadow-md transition-all`}>
                                     <div className="text-2xl mb-2">{s.icon}</div>
@@ -700,10 +700,10 @@ export default function CurriculumPage() {
                             <h2 className="font-black text-gray-900 text-base mb-4" style={{ fontFamily: "Merriweather,serif" }}>📚 Research Sources</h2>
                             <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
                                 {[
-                                    { icon: "🇬🇧", title: "UK Home Office", desc: "Overstay data, visa statistics & UK laws (2025)" },
-                                    { icon: "📊", title: "Migration Observatory", desc: "Integration challenges & employment data" },
-                                    { icon: "🧠", title: "IOM / UNHCR", desc: "Psychological screening (PHQ-9, GAD-7, RHS-15)" },
-                                    { icon: "📖", title: "Life in the UK Handbook", desc: "General knowledge, history & UK values" },
+                                    { title: "UK Home Office", desc: "Overstay data, visa statistics & UK laws (2025)" },
+                                    { title: "Migration Observatory", desc: "Integration challenges & employment data" },
+                                    { title: "IOM / UNHCR", desc: "Psychological screening (PHQ-9, GAD-7, RHS-15)" },
+                                    { title: "Life in the UK Handbook", desc: "General knowledge, history & UK values" },
                                 ].map(s => (
                                     <div key={s.title} className="bg-gray-50 border border-gray-100 rounded-xl p-4">
                                         <div className="text-2xl mb-2">{s.icon}</div>
